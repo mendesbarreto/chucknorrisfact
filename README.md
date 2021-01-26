@@ -12,7 +12,19 @@ To setup the the fiber you need a ```go.mod``` file, to see what the commands be
 First run the command bellow: 
 
 ````go
-go mod init bitwiseGo
+go mod init chucknorrisfact
 go get github.com/gofiber/fiber/v2
 go mod tidy
+go run main.go
 ````
+
+# Get the fact from API
+
+```bash
+#MAC OSX
+curl -s http://35.225.15.82:8000/api/fact | python -mjson.tool
+
+#Linux
+curl -s http://35.225.15.82:8000/api/fact | json_pp -json_opt pretty,canonical
+
+```
